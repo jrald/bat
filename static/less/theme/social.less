@@ -1,0 +1,38 @@
+.social{
+	padding: 0 0;
+
+	li{
+		float: left;
+		margin-left: 7px;
+		
+		span{
+			color: #fff;
+			padding: 8px 5px;
+			min-width: 32px;
+			text-align: center;
+			overflow: hidden;
+		}
+		.fa-facebook{
+			background: #3b5998;
+		}
+		.fa-twitter{
+			background: #56a3d9;
+		}
+		.fa-google-plus{
+			background: #dd4b39;
+		}
+		.fa-pinterest{
+			background: #cb211d;
+		}
+
+		&:first-child{
+			margin-left: 0;
+		}
+		& a:hover{
+			span:before{
+				-webkit-animation: pulse .7s;
+  					animation: pulse .7s;
+			}
+		}
+	}
+}

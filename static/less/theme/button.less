@@ -1,0 +1,52 @@
+.btn{
+	position: relative;
+	.border-radius(0);
+	font-size: 20px;
+}
+
+.btn-flat{
+	position: relative;
+	color: #3fb7e9;
+	background: none;
+	border: none;
+	border-bottom: 1px solid #3fb7e9;
+	font-size: 22px;
+	margin-top: 60px;
+
+}
+.btn-secondary{
+	color: #fff;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 3;
+
+	span{
+		position: relative;
+		z-index: 10;
+	}
+
+	&:after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: -100%;
+		left: 0;
+		background: #fff;
+		.transition(.1s ease-in-out);
+		z-index: 2;
+	}
+
+	&:hover{
+		color: #3fb7e9;
+		&:after{
+			content: "";
+			top: 0px;
+		}
+	}
+}

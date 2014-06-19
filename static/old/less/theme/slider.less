@@ -1,0 +1,75 @@
+.slider{
+	background:url("@{image-url-global}/bannerbg.png") no-repeat;
+	background-color: #101622;
+	background-position: center;
+	min-height: 770px;
+	text-align: center;
+	padding-top: 100px;
+
+	.control-nav{
+		width: 195px;
+		margin: auto;
+		height: 5px;
+		padding-left: 0;
+		list-style: none;
+		li{
+			float: left;
+			padding: 0 2px;
+
+			a{
+				background: #515151;
+				text-decoration: none;
+				display: block;
+				width: 60px;
+				height: 5px;
+
+				&:hover{
+					background: #00bbff;
+				}
+			}
+		}
+	}
+}
+.slides{
+	padding-left: 0;
+	color: #fff;
+	h1{
+		width: 50%;
+	}
+	li{
+		position: relative;
+	}
+	.slider-tolltip{
+		letter-spacing: 1px;
+		text-align: right;
+		a{
+			float: right;
+		}
+		h2{
+			border-bottom: 1px solid #515151;
+			padding: 10px 0;
+		}
+		p{
+			color: #9c9c9c;
+		}
+		a{
+			font-family: 'brandon_ita';
+			&:hover{
+				color: #428bca;
+			}
+		}
+	}
+	.tolltip-marker{
+	    content: "• ";
+	    color: red; /* or whatever color you prefer */
+
+	}
+	.slide-desc{
+		position: absolute;
+		letter-spacing: 1px;
+		text-align: left;
+		margin: 0;
+		color: #fff;
+	}	
+
+}
