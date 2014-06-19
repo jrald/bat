@@ -25,9 +25,13 @@
 						<li>toll free: 866-690-3272</li>
 					</ul>
 				</div>
+				<span class="feather f1"></span>
 				<div class="post-img">
 					<img src="placeholders/trampoline-single.png">
 				</div>
+				<span class="feather f2"></span>
+				<span class="feather f3"></span>
+				<span class="feather f4"></span>
 			</div>
 			
 		</div>
@@ -74,9 +78,12 @@
 						<li>toll free: 866-690-3272</li>
 					</ul>
 				</div>
+				<span class="ribbon r1"></span>
 				<div class="post-img">
 					<img src="placeholders/trampoline-single.png">
 				</div>
+				<span class="ribbon r2"></span>
+				<span class="ribbon r3"></span>
 			</div>
 		</div>
 	</div>
