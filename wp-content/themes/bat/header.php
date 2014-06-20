@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>css/main.css">
     <script src="<?php echo THEME_DIR_URI ?>scripts/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="<?php echo THEME_DIR_URI ?>scripts/vendor/jquery-1.11.0.min.js"></script>
+    <!--<script src="<?php echo THEME_DIR_URI ?>scripts/vendor/jquery-1.11.0.min.js"></script>-->
 	<?php wp_head(); ?>
 </head>
 

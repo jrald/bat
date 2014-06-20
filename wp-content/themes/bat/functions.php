@@ -40,6 +40,8 @@ if ( ! defined('DR') )
 	define('DR', '/');
 }
 define('THEME_DIR_URI', get_template_directory_uri().DR);
+define('YES', true);
+define('NO', false);
 
 /**
  * Twenty Fourteen only works in WordPress 3.6 or later.
@@ -553,4 +555,47 @@ class Nav_Walker_Nav_Menu extends Walker_Nav_Menu {
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
+}
+
+if ( !function_exists( 'optionsframework_init' ) ) {
+	define( 'OPTIONS_FRAMEWORK_DIRECTORY', THEME_DIR_URI . '/inc/' );
+	require_once dirname( __FILE__ ) . '/inc/options-framework.php';
+}
+
+function excerpt($content = false, $limit = 100, $strptags = false) {
+
+	$content = !$content ? get_the_excerpt() : $content;
+	$content = $strptags ? strip_tags($content) : $content;
+
+
+	if (count($excerpt)>=$limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'...';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	} 
+	
+	// $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+	return $excerpt;
+}
+
+function content($content = false, $limit = 100, $strptags = false) {
+
+	$content = !$content ? get_the_content() : $content;
+	$content = $strptags ? strip_tags($content) : $content;
+
+
+	$content = explode(' ', $content, $limit);
+	if (count($content)>=$limit) {
+		array_pop($content);
+		$content = implode(" ",$content).'...';
+	} else {
+		$content = implode(" ",$content);
+	} 
+
+	// $content = preg_replace('/\[.+\]/','', $content);
+	// $content = apply_filters('the_content', $content); 
+	// $content = str_replace(']]>', ']]&gt;', $content);
+	
+	return $content;
 }
