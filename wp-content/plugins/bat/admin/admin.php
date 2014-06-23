@@ -43,8 +43,6 @@ function bat_custom_post_init() {
 	register_post_type( 'trampoline', $args );
 
 
-
-
 	$labels = array(
 		'name'               => _x( 'Partners & Clients', 'post type general name', 'default' ),
 		'singular_name'      => _x( 'Partner & Client', 'post type singular name', 'default' ),

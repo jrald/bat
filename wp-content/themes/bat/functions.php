@@ -599,3 +599,104 @@ function content($content = false, $limit = 100, $strptags = false) {
 	
 	return $content;
 }
+
+//Testimonial
+add_action( 'optionsframework_custom_scripts', 'optionsframework_custom_scripts' );
+
+ register_post_type('testimonial', array(
+      'labels' => array('name' => __('Testimonial'),
+                 'singular_name' => __('Testimonial'),
+                 'add_new_item' => __('Add New Testimonial'),
+                 'edit_item' => __('Edit Testimonial'),
+           ),
+          'public' => true,
+		  '_builtin' => false,
+		  'query_var' => true,
+		  'rewrite' => array('slug' => 'testimonial', 'with_front' => false),
+          'show_ui' => true,
+          'supports' => array('title','editor','thumbnail', 'page-attributes')
+  ));
+
+   $labels = array(
+      'name'                       => _x( 'Categories', 'taxonomy general name' ),
+      'singular_name'              => _x( 'Category', 'taxonomy singular name' ),
+      'search_items'               => __( 'Search Categories' ),
+      'popular_items'              => __( 'Popular Categories' ),
+      'all_items'                  => __( 'All Categories' ),
+      'parent_item'                => null,
+      'parent_item_colon'          => null,
+      'edit_item'                  => __( 'Edit Category' ),
+      'update_item'                => __( 'Update Category' ),
+      'add_new_item'               => __( 'Add New Category' ),
+      'new_item_name'              => __( 'New Category Name' ),
+      'separate_items_with_commas' => __( 'Separate categories with commas' ),
+      'add_or_remove_items'        => __( 'Add or remove categories' ),
+      'choose_from_most_used'      => __( 'Choose from the most used categories' ),
+      'not_found'                  => __( 'No cate	gories found.' ),
+      'menu_name'                  => __( 'Categories' ),
+  );
+
+  $args = array(
+      'hierarchical'          => false,
+      'labels'                => $labels,
+      'show_ui'               => true,
+      'show_admin_column'     => true,
+      'update_count_callback' => '_update_post_term_count',
+      'query_var'             => true,
+      'rewrite'               => array( 'slug' => 'testimonial-cat' )
+  );
+
+  register_taxonomy( 'testimonial_cat', 'testimonial', $args );
+
+
+  //Products
+add_action( 'optionsframework_custom_scripts', 'optionsframework_custom_scripts' );
+
+ register_post_type('product', array(
+      'labels' => array('name' => __('Product'),
+                 'singular_name' => __('Product'),
+                 'add_new_item' => __('Add New Product'),
+                 'edit_item' => __('Edit Product'),
+           ),
+          'public' => true,
+		  '_builtin' => false,
+		  'query_var' => true,
+		  'rewrite' => array('slug' => 'product', 'with_front' => false),
+          'show_ui' => true,
+          'supports' => array('title','editor','thumbnail', 'page-attributes')
+  ));
+
+   $labels = array(
+      'name'                       => _x( 'Categories', 'taxonomy general name' ),
+      'singular_name'              => _x( 'Category', 'taxonomy singular name' ),
+      'search_items'               => __( 'Search Categories' ),
+      'popular_items'              => __( 'Popular Categories' ),
+      'all_items'                  => __( 'All Categories' ),
+      'parent_item'                => null,
+      'parent_item_colon'          => null,
+      'edit_item'                  => __( 'Edit Category' ),
+      'update_item'                => __( 'Update Category' ),
+      'add_new_item'               => __( 'Add New Category' ),
+      'new_item_name'              => __( 'New Category Name' ),
+      'separate_items_with_commas' => __( 'Separate categories with commas' ),
+      'add_or_remove_items'        => __( 'Add or remove categories' ),
+      'choose_from_most_used'      => __( 'Choose from the most used categories' ),
+      'not_found'                  => __( 'No cate	gories found.' ),
+      'menu_name'                  => __( 'Categories' ),
+  );
+
+  $args = array(
+      'hierarchical'          => false,
+      'labels'                => $labels,
+      'show_ui'               => true,
+      'show_admin_column'     => true,
+      'update_count_callback' => '_update_post_term_count',
+      'query_var'             => true,
+      'rewrite'               => array( 'slug' => 'product-cat' )
+  );
+
+  register_taxonomy( 'product_cat', 'product', $args );
+
+  //
+
+
