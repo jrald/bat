@@ -2,6 +2,7 @@
 	position: relative;
 	.border-radius(0);
 	font-size: 20px;
+	.transition(.1s all);
 }
 
 .btn-flat{
@@ -48,5 +49,21 @@
 			content: "";
 			top: 0px;
 		}
+	}
+}
+.btn-close{
+	margin-top: 10px;
+	display: none;
+	background: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 1px;
+	float: right;
+	padding: 15px 20px;
+	padding-right: 0;	
+
+	&:hover{
+		color: #3fb7e9;
 	}
 }

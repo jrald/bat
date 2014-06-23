@@ -23,13 +23,13 @@
                     </ul>    
                 </div>
                 <div class="col-sm-6">
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                     <div class="widget-contact">
                         <p class="t-sm">We’d love to hear from you:</p>
                         <p class="t-sm"><a href="#">info@bestamericantrampolines.com</a></p>
                     </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                     <div class="widget-contact">
                         <p class="t-sm">Call us to find our more:</p>
                         <p class="t-sm">local: <a href="#"> 972-475-0092</a></p>
@@ -56,15 +56,15 @@
     </div>  
 </div>
 
-
 <script src="scripts/libs/bootstrap.min.js"></script>
 <script src="scripts/libs/jarallax.js"></script>
 <script src="scripts/libs/animations.js"></script>
 <script src="scripts/libs/owl.carousel.min.js"></script>
 <script src="scripts/libs/waypoints.min.js"></script>
 <script src="scripts/libs/jquery.counterup.min.js"></script>
+<script src="scripts/libs/jquery.elevatezoom.js"></script>
 <script src="scripts/plugins.js"></script>
-<script src="scripts/main-ck.js"></script>
+<script src="scripts/main.js"></script>
     <script type="text/javascript">
         (function($){
             $(function(){
@@ -91,5 +91,6 @@
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-XXXXX-X');ga('send','pageview');
 </script>
+</div>
 </body>
 </html>

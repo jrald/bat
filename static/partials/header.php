@@ -29,27 +29,37 @@
                     <img src="images/logo.png" alt="">
                 </a>
             </div>
-            <div class="nav-top pull-right">
-                <ul class="nav navbar-nav">
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Shipping Policy</a></li>
-                </ul>
-                <ul class="nav navbar-nav contact pull-left">
-                    <li><span>Dallas, Texas</span></li>
-                    <li><a href="tel:866-690-3272">866-690-3272</a></li>
-                    <li><a href="tel:972-475-0092">972-475-0092</a></li>
-                </ul>
+            <button type="button" class="navbar-toggle" data-target=".nav-cont">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="nav-cont">
+                <button class='btn btn-close'>close</button>
+                <nav class="nav-top pull-right">
+                    <ul class="nav navbar-nav">
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav contact pull-left">
+                        <li><span>Dallas, Texas</span></li>
+                        <li><a href="tel:866-690-3272">866-690-3272</a></li>
+                        <li><a href="tel:972-475-0092">972-475-0092</a></li>
+                    </ul>
+                </nav>
+                <nav class="navbar navbar-default navbar-right" role="navigation">
+                    <ul class="nav navbar-nav cl-effect-5">
+                      <li class="current-menu-item"><a href="index.php"><span data-hover="Home">Home</span></a></li>
+                      <li><a href="company.php"><span data-hover="Company">Company</span></a></li>
+                      <li><a href="trampolines.php"><span data-hover="Trampolines">Trampolines</span></a></li>
+                      <li><a href="replacement.php"><span data-hover="Replacement Parts">Replacement Parts</span></a></li>
+                      <li><a href="contact.php"><span data-hover="Contacts">Contacts</span></a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navbar navbar-default navbar-right" role="navigation">
-                <ul class="nav navbar-nav cl-effect-5">
-                  <li class="current-menu-item"><a href="index.php"><span data-hover="Home">Home</span></a></li>
-                  <li><a href="company.php"><span data-hover="Company">Company</span></a></li>
-                  <li><a href="trampolines.php"><span data-hover="Trampolines">Trampolines</span></a></li>
-                  <li><a href="replacement.php"><span data-hover="Replacement Parts">Replacement Parts</span></a></li>
-                  <li><a href="contact.php"><span data-hover="Contacts">Contacts</span></a></li>
-                </ul>
-            </nav>
         </div>
     </div>
 
  </header>
+
+ <div class="body-wrapper">

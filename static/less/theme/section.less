@@ -67,7 +67,27 @@
 		}
 		h3{
 			margin: 0 0;
-		}	
+		}
+		
+		@media(max-width: 620px){
+
+			padding: 20px 0;
+
+			div[class^=col-sm]{
+				clear: both;
+				width: 100%;
+			}
+
+			h1{
+				font-size: 35px;
+				float: left;
+				clear: left;
+			}
+			h3{
+				float: left;
+				margin: 10px 0 20px 15px;
+			}
+		}
 	}
 	
 
@@ -128,6 +148,29 @@
 
 	.avatar-details{
 		width: 300px;
+	}
+
+}
+
+@media(max-width: 800px){
+	.section-l1{
+		padding: 50px 0;
+	}
+	.section-l2{
+		padding: 50px 0;
+		background: #f4f4f4;
+	}
+	.section-l3{
+		padding: 30px 0;
+	}
+	.section-l4{
+		padding: 50px 0 0;
+	}
+	.section-l5{
+		padding: 0px 0 50px;
+	}
+	.section-l6{
+		padding: 20px 0;
 	}
 
 }

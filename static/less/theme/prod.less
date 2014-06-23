@@ -12,10 +12,7 @@
 			top: 50%;
 			left: 50%;
 			max-width: 100%;
-			-webkit-transform: translate(-50%, -50%);
-			-moz-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-
+			.translate(-50%, -50%);
 		}
 	}
 
@@ -28,16 +25,14 @@
 
 	img{
 		margin: auto;
+		max-width: 90%;
 	}
 
 	.owl-buttons{
 
 		& > div{
 			position: absolute;
-			top: 61%;
-			-webkit-transform: translate(-50%, -50%);
-			-moz-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
+			top: 50%;
 			padding: 22px 20px!important;
 			margin: 0 0 0 0;
 		}
@@ -51,6 +46,17 @@
 			right: 0px!important;
 			background:url("@{image-url-global}/arrow-R.png") no-repeat!important;
 			background-position: center;
+		}
+
+		@media(max-width: 800px){
+			.owl-prev{
+				top: 55%;
+				background:url("@{image-url-global}/arrow-L-sm.png") no-repeat center left!important;
+			}
+			.owl-next{
+				top: 55%;
+				background:url("@{image-url-global}/arrow-R-sm.png") no-repeat center right!important;
+			}
 		}
 
 	}

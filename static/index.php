@@ -21,31 +21,33 @@
 <div class="section section-l1">
 	<div class="container">
 		<h1 class="section-title">OUR TRAMPOLINES</h1>
-		<div class="prod-feat">
-			<div class="row">	
-				<div class="col-sm-12">
-					<div class="prod-img"><img src="placeholders/trampoline.png">	</div>
-					<h4>5X9 Regulation</h4>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-				</div>
-				<div class="col-sm-12">
-					<div class="prod-img"><img src="placeholders/trampoline1.png">	</div>	
-					<h4>5X9 Regulation</h4>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-				</div>
-				<div class="col-sm-12">
-					<div class="prod-img"><img src="placeholders/trampoline3.png">	</div>
-					<h4>5X9 Regulation</h4>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-				</div>
-				<div class="col-sm-12">
-					<div class="prod-img"><img src="placeholders/trampoline.png">	</div>
-					<h4>5X9 Regulation</h4>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		<div class="section section-l3">
+			<div class="prod-feat">
+				<div class="row">	
+					<div class="col-sm-12">
+						<div class="prod-img"><img src="placeholders/trampoline.png">	</div>
+						<h4>5X9 Regulation</h4>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					</div>
+					<div class="col-sm-12">
+						<div class="prod-img"><img src="placeholders/trampoline1.png">	</div>	
+						<h4>5X9 Regulation</h4>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					</div>
+					<div class="col-sm-12">
+						<div class="prod-img"><img src="placeholders/trampoline3.png">	</div>
+						<h4>5X9 Regulation</h4>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					</div>
+					<div class="col-sm-12">
+						<div class="prod-img"><img src="placeholders/trampoline.png">	</div>
+						<h4>5X9 Regulation</h4>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -56,9 +58,9 @@
 
 		<div class="prod-feat-single">
 			<div class="owl-item">
-				<h1 class="section-title col-sm-auto"><p>INDOOR TRAMPOLINE PARK DESIGN & MANUFACTURER</h1>
+				<h1 class="section-title col-sm-auto">INDOOR TRAMPOLINE PARK DESIGN & MANUFACTURER</h1>
 				<div class="prod-indoor">
-					<img src="placeholders/banner-slide.png">
+					<img class="zoom-img" src="placeholders/banner-slide.png" data-zoom-image="placeholders/banner-slide.png"/>
 				</div>
 			</div>
 			<div class="owl-item">
