@@ -13,7 +13,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="row">
-						<div class="col-sm-8">
+						<div class="col-md-8">
 							<h3 class="t-30 title-l1">Best American Trampolines is led by a team of dedicated experts with in-depth knowledge of the national marketplace. </h3>
 							<p>With over forty years of experience in the industry we strive to continuously provide our customers with the highest levels of customer service, product knowledge and superior product craftsmanship. We offer a variety of products catering to both residential and commercial clientele. </p>
 							<p>Whether you’re looking for backyard recreation, or a competition style trainer, we have the products to accommodate your every need. Since 1978 we have been producing products that exceed the competition. </p>
@@ -28,22 +28,22 @@
 			<h3 class="title-grad"><span>DISCOVER OUR PRODUCTS</span></h3> 
 			<div class="post-sm post-bordered">
 				<ul class="post-listing">
-					<li class="col-sm-3">
+					<li class="col-md-3 col-sm-6">
 						<h4>Rectangular Trampolines</h4>
 						<a href="" class="t-mini">find out more</a>
 						<img src="placeholders/trampoline-sm.png" alt="">
 					</li>
-					<li class="col-sm-3">
+					<li class="col-md-3 col-sm-6">
 						<h4>In-Ground Trampolines</h4>
 						<a href="" class="t-mini">find out more</a>
 						<img src="placeholders/trampoline2-sm.png" alt="">
 					</li>
-					<li class="col-sm-3">
+					<li class="col-md-3 col-sm-6">
 						<h4>Trampoline Parks</h4>
 						<a href="" class="t-mini">find out more</a>
 						<img src="placeholders/trampoline3-sm.png" alt="">
 					</li>
-					<li class="col-sm-3">
+					<li class="col-md-3 col-sm-6">
 						<h4>Olympic Trampolines</h4>
 						<a href="" class="t-mini">find out more</a>
 						<img src="placeholders/trampoline-sm.png" alt="">

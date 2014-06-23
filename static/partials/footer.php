@@ -23,18 +23,20 @@
                     </ul>    
                 </div>
                 <div class="col-sm-6">
-                    <div class="col-md-6">
-                    <div class="widget-contact">
-                        <p class="t-sm">We’d love to hear from you:</p>
-                        <p class="t-sm"><a href="#">info@bestamericantrampolines.com</a></p>
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                    <div class="widget-contact">
-                        <p class="t-sm">Call us to find our more:</p>
-                        <p class="t-sm">local: <a href="#"> 972-475-0092</a></p>
-                        <p class="t-sm">toll free: <a href="#"> 866-690-3272</a></p>
-                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                        <div class="widget-contact">
+                            <p class="t-sm">We’d love to hear from you:</p>
+                            <p class="t-sm"><a href="#">info@bestamericantrampolines.com</a></p>
+                        </div>
+                        </div>
+                        <div class="col-xs-5">
+                        <div class="widget-contact">
+                            <p class="t-sm">Call us to find our more:</p>
+                            <p class="t-sm">local: <a href="#"> 972-475-0092</a></p>
+                            <p class="t-sm">toll free: <a href="#"> 866-690-3272</a></p>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,7 +77,7 @@
                     var name = $(this).data('name');
                     var pos = $(this).data('position');
 
-                    $('.owl-page:eq('+index+') > span').html('<div class="avatar-details"><div class="col-sm-5"><img src="'+img+'" class="img-circle img-grayscale"></div><div class="col-sm-6"><div class="avatar-profile row"><p>'+name+'</p><p><span>'+pos+'</span></p></div></div>');
+                    $('.owl-page:eq('+index+') > span').html('<div class="avatar-details"><div class="col-md-5"><img src="'+img+'" class="img-circle img-grayscale"></div><div class="col-md-7"><div class="avatar-profile row"><p>'+name+'</p><p><span>'+pos+'</span></p></div></div>');
 
                 });
             });
