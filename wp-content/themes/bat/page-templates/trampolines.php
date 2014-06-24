@@ -14,6 +14,7 @@ get_header(); ?>
 			$post_type = 'trampoline';
 			$counter = 1;
 			$class = 'well-fieldgrass';
+			$tooltip = 'img-tooltip-l';
 			$tax = 'trampoline_cat';
 			$tax_terms = get_terms($tax);
 			if ($tax_terms) {
@@ -34,13 +35,25 @@ get_header(); ?>
 					    //  echo 'List of '.$post_type . ' where the taxonomy '. $tax . '  is '. $tax_term->name;
 					      while ($my_query->have_posts()) : $my_query->the_post(); 
 
-					      if($counter==2){
+					      if (($counter % 3) == 1){
+					      	$class = "well-fieldgrass";
+					      }
+					      else if($counter%2){
 					      	$class = "well-grass";
 					      }
-					      else if($counter==3){
+					      else if($counter%3){
 					      	$class = "well-wood";
 					      }
 
+					      if (($counter % 2)==0){
+					      	$tooltip = "img-tooltip-r";
+					      }
+					      else{
+					      	$tooltip = "img-tooltip-l";
+					      }
+
+					      
+					     
 					      ?>
 					        
 							<div class="post post-lg">
@@ -49,7 +62,7 @@ get_header(); ?>
 								<span class="light-b"></span>
 									<div class="container">
 										<div class="img-tolltip">
-											<h2 class="img-tooltip-l"><?php the_title(); ?></h2>
+											<h2 class="<?php echo $tooltip; ?>"><?php the_title(); ?></h2>
 											<p><?php the_subtitle(); ?></p>
 											<a href="individual.php"><span class="right-carret">&nbsp;</span>Discover this model</a>
 										</div>

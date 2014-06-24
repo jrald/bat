@@ -53,6 +53,7 @@ get_header(); ?>
 											$post_type = 'trampoline';
 											$tax = 'trampoline_cat';
 											$tax_terms = get_terms($tax);
+											
 											if ($tax_terms) {
 												foreach ($tax_terms  as $tax_term) {
 
@@ -71,15 +72,20 @@ get_header(); ?>
 													    //  echo 'List of '.$post_type . ' where the taxonomy '. $tax . '  is '. $tax_term->name;
 													      while ($my_query->have_posts()) : $my_query->the_post(); 
 
+													      $image = get_field('home_page_display_image');
+											
+													      if( !empty($image) ):
+
 													      ?>
 
 															<div class="col-sm-12">
-																<div class="prod-img"><?php if ( has_post_thumbnail() ) {the_post_thumbnail();}  ?></div>
+																<div class="prod-img"><img src="<?php echo the_field('home_page_display_image')['url'] ?>" alt="<?php echo $image['alt']; ?>" /></div>
 																<h4><?php the_title(); ?></h4>
 																<p><?php the_content(); ?></p>
 															</div>
 
 														<?php
+														endif;
 														endwhile;
 														wp_reset_query();
 													    } 
