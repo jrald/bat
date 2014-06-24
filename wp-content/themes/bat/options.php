@@ -178,69 +178,89 @@ function optionsframework_options() {
 		'name' => __('Facebook', 'options_framework_theme'),
 		'desc' => __('ex. http://facebook.com/username', 'options_framework_theme'),
 		'id' => 'link_facebook',
-		'std' => 'http://facebook.com/',
+		'std' => '',
 		'type' => 'text');
 	
 	$options[] = array(
 		'name' => __('Twitter', 'options_framework_theme'),
 		'desc' => __('ex. http://twitter.com/username', 'options_framework_theme'),
 		'id' => 'link_twitter',
-		'std' => 'http://twitter.com/',
+		'std' => '',
 		'type' => 'text');
 	
 	$options[] = array(
 		'name' => __('GooglePlus', 'options_framework_theme'),
 		'desc' => __('ex. http://plus.google.com/username', 'options_framework_theme'),
 		'id' => 'link_gplus',
-		'std' => 'http://plus.google.com.com/',
+		'std' => '',
 		'type' => 'text');
 	
 	$options[] = array(
 		'name' => __('Pinterest', 'options_framework_theme'),
 		'desc' => __('ex. http://plus.google.com/username', 'options_framework_theme'),
 		'id' => 'link_pinterest',
-		'std' => 'http://pinterest.com/',
+		'std' => '',
 		'type' => 'text');
-	
-	$options[] = array(
-		'name' => __('Youtube', 'options_framework_theme'),
-		'desc' => __('ex. http://plus.google.com/username', 'options_framework_theme'),
-		'id' => 'link_youtube',
-		'std' => 'http://youtube.com/',
-		'type' => 'text');
-
+//------------------------
 	$options[] = array(
 		'name' => __('Forms and Contact Details', 'options_framework_theme'),
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Contact Number', 'options_framework_theme'),
-		'desc' => __('', 'options_framework_theme'),
-		'id' => 'contact_number',
-		'std' => '',
-		'type' => 'text');
+	'name' => __('Local DFW customers call', 'options_framework_theme'),
+	'desc' => __('Enter your Local DFW customers call', 'options_framework_theme'),
+	'id' => 'local_dfw',
+	'std' => '',
+	'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Contact Address', 'options_framework_theme'),
-		'desc' => __('', 'options_framework_theme'),
-		'id' => 'contact_address',
-		'std' => '',
-		'type' => 'textarea');
+	'name' => __('Out of area call toll free', 'options_framework_theme'),
+	'desc' => __('Enter your Out of area call toll free', 'options_framework_theme'),
+	'id' => 'toll_free',
+	'std' => '',
+	'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Fax', 'options_framework_theme'),
-		'desc' => __('', 'options_framework_theme'),
-		'id' => 'contact_fax',
-		'std' => '',
-		'type' => 'text');
+	'name' => __('Complete Address', 'options_framework_theme'),
+	'desc' => __('Enter your complete address here', 'options_framework_theme'),
+	'id' => 'complete_address',
+	'std' => '',
+	'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Email', 'options_framework_theme'),
-		'desc' => __('', 'options_framework_theme'),
-		'id' => 'contact_email',
-		'std' => '',
-		'type' => 'text');
+	'name' => __('Street Address', 'options_framework_theme'),
+	'desc' => __('Enter your street address', 'options_framework_theme'),
+	'id' => 'street_address',
+	'std' => '',
+	'type' => 'text');
 
+	$options[] = array(
+	'name' => __('State', 'options_framework_theme'),
+	'desc' => __('Enter your state', 'options_framework_theme'),
+	'id' => 'state_span',
+	'std' => '',
+	'type' => 'text');
+
+	$options[] = array(
+	'name' => __('Zip Code', 'options_framework_theme'),
+	'desc' => __('Enter your zip code', 'options_framework_theme'),
+	'id' => 'zip_code',
+	'std' => '',
+	'type' => 'text');
+
+	$options[] = array(
+	'name' => __('Email Us', 'options_framework_theme'),
+	'desc' => __('Enter your Email Address', 'options_framework_theme'),
+	'id' => 'email_add',
+	'std' => '',
+	'type' => 'text');
+
+	$options[] = array(
+	'name' => __('Hours Of Operation', 'options_framework_theme'),
+	'desc' => __('Enter your hours of operation', 'options_framework_theme'),
+	'id' => 'op_hours',
+	'std' => '',
+	'type' => 'text');
 
 	$options[] = array(
 		'name' => __('Footer', 'options_framework_theme'),
@@ -261,10 +281,17 @@ function optionsframework_options() {
 	);
 	
 	$options[] = array(
-		'name' => __('Copyright Text Editor', 'options_framework_theme'),
+		'name' => __('Footer Text Editor', 'options_framework_theme'),
 		'id' => 'copyright_editor',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
+
+	$options[] = array(
+		'name' => __('Copyright Text', 'options_framework_theme'),
+		'desc' => __('Enter the copyright text', 'options_framework_theme'),
+		'id' => 'copyright_text',
+		'std' => '',
+		'type' => 'text');
 
 	return $options;
 }
