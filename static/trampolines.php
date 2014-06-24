@@ -1,7 +1,7 @@
 <?php include('partials/header.php'); ?>
 
 <div class="section section-top">
-	<div class="page-title">
+	<div class="page-title" data-scroll-reveal="enter top over .5s and move 70px after 0.4s">
 		<h1 class="section-title t-nm col-sm-auto">Discover our trampolines</h1>
 		<p class="section-subtitle col-sm-auto">Best American Trampolines is led by a team of dedicated experts with in-depth knowledge of the national marketplace. </p>
 	</div>
