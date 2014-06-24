@@ -14,6 +14,7 @@ get_header(); ?>
 			$post_type = 'trampoline';
 			$counter = 1;
 			$class = 'well-fieldgrass';
+			$class_bg = 'bg-fgrass';
 			$tooltip = 'img-tooltip-l';
 			$tax = 'trampoline_cat';
 			$tax_terms = get_terms($tax);
@@ -37,12 +38,15 @@ get_header(); ?>
 
 					      if (($counter % 3) == 1){
 					      	$class = "well-fieldgrass";
+					      	$class_bg = "bg-fgrass";
 					      }
 					      else if($counter%2){
 					      	$class = "well-grass";
+					      	$class_bg = "bg-grass";
 					      }
 					      else if($counter%3){
 					      	$class = "well-wood";
+					      	$class_bg = "bg-wood";
 					      }
 
 					      if (($counter % 2)==0){
@@ -94,7 +98,7 @@ get_header(); ?>
 										<span class="feather f3"></span>
 										<span class="feather f4"></span>
 									</div>
-									
+									<div class="bg-pretty <?php echo $class_bg; ?>"></div>
 								</div>
 							</div>
 						

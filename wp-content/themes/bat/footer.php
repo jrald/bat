@@ -130,7 +130,7 @@
 <script src="<?php echo THEME_DIR_URI ?>scripts/libs/waypoints.min.js"></script>
 <script src="<?php echo THEME_DIR_URI ?>scripts/libs/jquery.counterup.min.js"></script>
 <script src="<?php echo THEME_DIR_URI ?>scripts/plugins.js"></script>
-<script src="<?php echo THEME_DIR_URI ?>scripts/main-ck.js"></script>
+<script src="<?php echo THEME_DIR_URI ?>scripts/main.js"></script>
     <script type="text/javascript">
         (function($){
             $(function(){

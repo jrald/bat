@@ -25,11 +25,11 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	
-    <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>css/normalize.min.css">
-    <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>css/main.css">
+    <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>styles/normalize.min.css">
+    <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>styles/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo THEME_DIR_URI ?>styles/main.css">
     <script src="<?php echo THEME_DIR_URI ?>scripts/vendor/modernizr-2.6.2.min.js"></script>
-    <!--<script src="<?php echo THEME_DIR_URI ?>scripts/vendor/jquery-1.11.0.min.js"></script>-->
+    <script src="<?php echo THEME_DIR_URI ?>scripts/vendor/jquery-1.11.0.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 

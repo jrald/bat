@@ -128,8 +128,8 @@
 			</ul>
 			<div class="tab-content tab-map">
 				<div class="tab-pane active">
-					<div class="col-sm-5">
-						<div class="tab-desc" id="tab1" data-scroll-reveal="enter left over .5s and move 70px after 0.8s">
+					<div class="col-sm-5" data-scroll-reveal="enter left over .5s and move 70px after 0.8s">
+						<div class="tab-desc" id="tab1">
 							<h1>OUR PRODUCTS ARE MADE IN THE USA</h1>
 							<p>We purchase all of our raw materials in the USA. We manufacture our products in the USA.</p>
 							<p>We employ American workers. There has never been a more important time in history to support companies based here in America. We ask for your support, and in return you can expect superior products and customer care.</p>

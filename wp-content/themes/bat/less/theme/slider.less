@@ -1,0 +1,123 @@
+ .slider{
+	background:url("@{image-url-global}/bg-grass.png") no-repeat;
+	background-color: #101622;
+	background-position: center bottom;
+	min-height: 770px;
+	text-align: center;
+	padding: 100px 0 50px;
+	.transition(ease-in-out .5s);
+
+	.control-nav{
+		width: 195px;
+		margin: auto;
+		height: 5px;
+		padding-left: 0;
+		list-style: none;
+		li{
+			float: left;
+			padding: 0 2px;
+
+			a{
+				background: #515151;
+				text-decoration: none;
+				display: block;
+				width: 60px;
+				height: 5px;
+
+				&:hover{
+					background: #00bbff;
+				}
+			}
+		}
+	}
+}
+.slides{
+	padding-left: 0;
+	color: #fff;
+	h1{
+		width: 50%;
+	}
+	li{
+		position: relative;
+		
+		img{
+			margin: 0 auto;
+		}
+	}
+	
+	.slide-desc{
+		position: absolute;
+		letter-spacing: 1px;
+		text-align: left;
+		margin: 0;
+		color: #fff;
+	}	
+
+}
+
+.slider-testi{
+	text-align: center;
+	max-width: 80%;
+	margin: auto;
+
+	.owl-item{
+		font-size: 20px;
+		font-family: 'brandon_ita';
+		line-height: 32px;
+	}
+	.owl-wrapper-outer{
+		margin: 100px 0 80px;
+	}
+
+	.owl-pagination{
+		width: 80%;
+		margin: auto;
+		.owl-page{
+			width: 33%;
+
+			&.active, &:hover{
+				span{
+					background: none!important;
+					background: transparent!important;
+
+					img{
+						filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+						-webkit-filter: grayscale(0%);
+					}
+				}
+
+			}
+			& > span{
+				.border-radius(0);
+				width: auto;
+				height: auto;
+				background: none;
+				margin: auto;
+
+				span{
+					width: 100%;
+					background: none!important;
+					background: transparent!important;
+					margin: 0 0;
+				}
+			}
+		}
+	}
+	@media (max-width: 800px){
+		.owl-pagination{
+			width: 100%;
+
+			img{
+				margin: auto;
+			}
+			.avatar-profile{
+				p{
+					text-align: center!important;
+				}
+			}
+		}
+
+	}
+
+
+}
