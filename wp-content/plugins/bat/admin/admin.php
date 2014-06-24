@@ -9,41 +9,6 @@ add_action( 'init', 'bat_custom_post_init' );
  */
 function bat_custom_post_init() {
 	$labels = array(
-		'name'               => _x( 'Trampolines', 'post type general name', 'default' ),
-		'singular_name'      => _x( 'Trampoline', 'post type singular name', 'default' ),
-		'menu_name'          => _x( 'Trampolines', 'admin menu', 'default' ),
-		'name_admin_bar'     => _x( 'Trampoline', 'add new on admin bar', 'default' ),
-		'add_new'            => _x( 'Add New', 'trampoline', 'default' ),
-		'add_new_item'       => __( 'Add New Trampoline', 'default' ),
-		'new_item'           => __( 'New Trampoline', 'default' ),
-		'edit_item'          => __( 'Edit Trampoline', 'default' ),
-		'view_item'          => __( 'View Trampoline', 'default' ),
-		'all_items'          => __( 'All Trampolines', 'default' ),
-		'search_items'       => __( 'Search Trampolines', 'default' ),
-		'parent_item_colon'  => __( 'Parent Trampolines:', 'default' ),
-		'not_found'          => __( 'No trampolines found.', 'default' ),
-		'not_found_in_trash' => __( 'No trampolines found in Trash.', 'default' )
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'trampoline' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
-	);
-
-	register_post_type( 'trampoline', $args );
-
-
-	$labels = array(
 		'name'               => _x( 'Partners & Clients', 'post type general name', 'default' ),
 		'singular_name'      => _x( 'Partner & Client', 'post type singular name', 'default' ),
 		'menu_name'          => _x( 'Partners & Clients', 'admin menu', 'default' ),

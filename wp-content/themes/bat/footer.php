@@ -26,26 +26,73 @@
         <aside class="widget-footer">
             <div class="row">
                 <div class="col-sm-6">
-                    <p>Best American Trampolines is led by a team of dedicated experts with in-depth knowledge of the national marketplace. </p>
+
+                <?php
+                $copy_edit =  of_get_option('copyright_editor', 'no entry'); 
+                str_replace(' ', '', $copy_edit);
+                ?>
+
+                <?php if($copy_edit!=""){?>
+                    <p><?php echo $copy_edit; ?></p>
+                <?php } ?>
                     <ul class="social">
-                        <li><a href=""><span class="fa fa-facebook"></span></a></li>
-                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                        <li><a href=""><span class="fa fa-google-plus"></span></a></li>
-                        <li><a href=""><span class="fa fa-pinterest"></span></a></li>
+
+                        <?php
+                        $fb_link =  of_get_option('link_facebook', 'no entry'); 
+                        str_replace(' ', '', $fb_link);
+                        $tweet_link =  of_get_option('link_twitter', 'no entry'); 
+                        str_replace(' ', '', $tweet_link);
+                        $gp_link =  of_get_option('link_gplus', 'no entry'); 
+                        str_replace(' ', '', $gp_link);
+                        $pint_link =  of_get_option('link_pinterest', 'no entry'); 
+                        str_replace(' ', '', $pint_link);
+                        ?>
+
+                        <?php if($fb_link!=""){?>
+                        <li><a href="<?php echo $fb_link; ?>"><span class="fa fa-facebook"></span></a></li>
+                        <?php } ?>
+                        <?php if($tweet_link!=""){?>
+                        <li><a href="<?php echo $tweet_link; ?>"><span class="fa fa-twitter"></span></a></li>
+                        <?php } ?>
+                        <?php if($gp_link!=""){?>
+                        <li><a href="<?php echo $gp_link; ?>"><span class="fa fa-google-plus"></span></a></li>
+                        <?php } ?>
+                        <?php if($pint_link!=""){?>
+                        <li><a href="<?php echo $pint_link; ?>"><span class="fa fa-pinterest"></span></a></li>
+                        <?php } ?>
                     </ul>    
                 </div>
                 <div class="col-sm-6">
                     <div class="col-sm-6">
                     <div class="widget-contact">
+
+                        <?php
+                        $email_ads =  of_get_option('email_add', 'no entry'); 
+                        str_replace(' ', '', $email_ads);?>
+
                         <p class="t-sm">We’d love to hear from you:</p>
-                        <p class="t-sm"><a href="#">info@bestamericantrampolines.com</a></p>
+                        <?php if($email_ads!=""){?>
+                        <p class="t-sm"><a href="#"><?php echo $email_ads; ?></a></p>
+                        <?php } ?>
                     </div>
                     </div>
                     <div class="col-sm-6">
                     <div class="widget-contact">
+
+                        <?php
+                        $local_df =  of_get_option('local_dfw', 'no entry'); 
+                        str_replace(' ', '', $local_df);
+                        $toll_fr =  of_get_option('toll_free', 'no entry'); 
+                        str_replace(' ', '', $toll_fr);
+                        ?>
+
                         <p class="t-sm">Call us to find our more:</p>
-                        <p class="t-sm">local: <a href="#"> 972-475-0092</a></p>
-                        <p class="t-sm">toll free: <a href="#"> 866-690-3272</a></p>
+                        <?php if($local_df!=""){?>
+                        <p class="t-sm">local: <a href="#"> <?php echo $local_df; ?></a></p>
+                        <?php } ?>
+                        <?php if($toll_fr!=""){?>
+                        <p class="t-sm">toll free: <a href="#"> <?php echo $toll_fr; ?></a></p>
+                        <?php } ?>
                     </div>
                     </div>
                 </div>
@@ -54,7 +101,14 @@
         <div class="footnotes">
             <div class="row">
                 <div class="col-sm-6">
-                    <p class="copyright t-mini">© Best American Trampolines, Inc., 2002-2014</p>
+
+                    <?php
+                    $copyright_p =  of_get_option('copyright_text', 'no entry'); 
+                    str_replace(' ', '', $copyright_p);?>
+
+                    <?php if($copyright_p!=""){?>
+                        <p class="copyright t-mini"><?php echo $copyright_p; ?></p>
+                    <?php } ?>
                 </div>
                 <div class="col-sm-6">
                 <ul class="nav navbar-nav nav-footer pull-right">

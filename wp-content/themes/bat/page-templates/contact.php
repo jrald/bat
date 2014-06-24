@@ -20,43 +20,91 @@ get_header(); ?>
 					?>
 <div class="section section-top section-top-lg">
 	<div class="page-title">
-		<h1 class="section-title t-nm col-sm-auto">Contact us</h1>
-		<p class="section-subtitle col-sm-auto">Have a question in mind? Let's talk!</p>
+		<h1 class="section-title t-nm col-sm-auto"><?php the_title(); ?></h1>
+		<p class="section-subtitle col-sm-auto"><?php the_subtitle(); ?></p>
 	</div>
 </div>
 
 <div class="t-content">
 	<div class="container">
 		<div class="well-blue offset-top-md">
-			<span><h1>Local DFW customers call: <strong>972 - 475 - 0092</strong></h1></span>
-			<span><h1>Out of area call toll free: <strong>866 - 690 - 3272</strong></h1></span>
+			<?php
+			  $local_df =  of_get_option('local_dfw', 'no entry'); 
+			  str_replace(' ', '', $local_df);
+			  $toll_fr =  of_get_option('toll_free', 'no entry'); 
+			  str_replace(' ', '', $toll_fr);
+			?>
+
+			<span>
+			<h1>Local DFW customers call: 
+			<?php if($local_df!=""){?>
+			<strong><?php echo $local_df; ?></strong>
+			<?php } ?>
+			</h1>
+			</span>
+			<span>
+			<h1>Out of area call toll free: 
+			<?php if($toll_fr!=""){?>
+			<strong><?php echo $toll_fr; ?></strong>
+			<?php } ?>
+			</h1>
+			</span>
 		</div>
 	</div>
 	<div class="section-l1">
 		<div class="container">
+			<?php
+			  $comp_add =  of_get_option('complete_address', 'no entry'); 
+			  str_replace(' ', '', $comp_add);
+			  $email_adds =  of_get_option('email_add', 'no entry'); 
+			  str_replace(' ', '', $comp_add);
+			  $op_hour =  of_get_option('op_hours', 'no entry'); 
+			  str_replace(' ', '', $comp_add);
+			?>
+
 			<div class="row">
 				<div class="col-sm-4">
 					<h4><b>Address:</b></h4>
-					<h4 class="t-sm">DFW Retail & Showroom Location: Plano, Texas 1701 Summit Ave, Suite 4, Plano, Texas 75074</h4>
+				<?php if($comp_add!=""){?>
+					<h4 class="t-sm"><?php echo $comp_add; ?></h4>
+				<?php } ?>
 				</div>
 				<div class="col-sm-4">
 					<h4><b>Email Us:</b></h4>
-					<h4 class="t-sm">Enquiries: info@bestamericantrampolines.com</h4>
+				<?php if($email_adds!=""){?>
+					<h4 class="t-sm">Enquiries: <?php echo $email_adds; ?></h4>
+				<?php } ?>
 				</div>
 				<div class="col-sm-4">
 					<h4><b>Hours of Operation:</b></h4>
-					<h4 class="t-sm">Monday - Friday 9:00 am - 5:00 pm, CST Saturday (Call)</h4>
+				<?php if($op_hour!=""){?>
+					<h4 class="t-sm"><?php echo $op_hour; ?></h4>
+				<?php } ?>
 				</div>
 			</div>
+
+
 		</div>
 	</div>
 	<div class="section section-l5">
 		<div class="container">
 			<div class="row">
-				<div class="address-bubble">
+				<div class="address-bubble" style="background: url('<?php if ( has_post_thumbnail() ) {the_post_thumbnail();}  ?>');">
+					<?php
+					  $street =  of_get_option('street_address', 'no entry'); 
+					  str_replace(' ', '', $street);
+					  $state =  of_get_option('state_span', 'no entry'); 
+					  str_replace(' ', '', $state);
+					  $zip =  of_get_option('zip_code', 'no entry'); 
+					  str_replace(' ', '', $zip);
+					?>
 					<span class="bubble">
-						<h3>1701 Summit Ave Suite4, Plano</h3>
-						<h3>Texas 75074</h3>
+					<?php if($street!=""){?>
+						<h3><?php echo $street; ?></h3>
+					<?php } ?>
+					<?php if($state!="" || $zip!=""){?>
+						<h3><?php echo $state; ?> <?php echo $zip; ?></h3>
+					<?php } ?>
 					</span>
 				</div>
 			</div>
@@ -67,23 +115,7 @@ get_header(); ?>
 		<div class="container">
 			<h1 class="section-title">EMAIL US</h1>
 			<div class="row">
-				<form action="" class="form-contact">
-					<div class="form-group col-sm-4">
-						<input class="form-control form-required" type="text" placeholder="Your Name">
-					</div>
-					<div class="form-group col-sm-4">
-						<input class="form-control" type="email" placeholder="Your Email">
-					</div>
-					<div class="form-group col-sm-4">
-						<input class="form-control" type="tel" placeholder="Phone Number">
-					</div>
-					<div class="form-group  form-textarea col-sm-12">
-						<textarea class="form-control form-required" name="text" id="message" cols="30" rows="3" placeholder="Your Message"></textarea>
-					</div>
-					<div class="form-action col-sm-12">
-						<button class="btn btn-flat">Submit Your Message</button>
-					</div>
-				</form>
+				<?php echo do_shortcode('[contact-form-7 id="77" title="Contact form 1"]'); ?>
 			</div>
 		</div>
 	</div>
