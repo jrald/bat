@@ -48,7 +48,7 @@
 		</div>
 		<div class="section section-l3">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-md-6">
 					<div class="row">
 						<div class="col-sm-10">
 							<h1 class="title-l4 t-md">BEST AMERICAN REPLACEMENT PARTS</h1>
@@ -81,7 +81,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-6">
 					<div class="row">
 						<div class="col-sm-10">
 							<h1 class="title-l4 t-md inset-top-md">SPRINGS</h1>
@@ -110,7 +110,7 @@
 				<div class="col-sm-6">
 					<div class="row">
 						<div class="col-sm-10">
-							<h1 class="title-l4 section-title">MEASURING INSTRUCTIONS</h1>
+							<h1 class="title-l4">MEASURING INSTRUCTIONS</h1>
 							<p class="t-gray">FRAME PADS</p>
 						</div>
 					</div>

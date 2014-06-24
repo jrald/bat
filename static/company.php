@@ -1,7 +1,7 @@
 <?php include('partials/header.php'); ?>
 
 <div class="section section-top title-l3">
-	<div class="page-title">
+	<div class="page-title" data-scroll-reveal="enter top over .5s and move 10px after 0.4s">
 		<h1 class="section-title t-nm col-sm-auto">Defining Premium</h1>
 		<p class="section-subtitle col-sm-auto">Since 1978</p>
 	</div>
@@ -9,12 +9,12 @@
 
 <div class="t-content">
 	<div class="container">
-		<div class="section section-l4">
+		<div class="section section-l4"  data-scroll-reveal="enter bottom over .5s and move 70px after 0.4s">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-md-8">
-							<h3 class="t-30 title-l1">Best American Trampolines is led by a team of dedicated experts with in-depth knowledge of the national marketplace. </h3>
+							<h3 class="t-30 title-l1" >Best American Trampolines is led by a team of dedicated experts with in-depth knowledge of the national marketplace. </h3>
 							<p>With over forty years of experience in the industry we strive to continuously provide our customers with the highest levels of customer service, product knowledge and superior product craftsmanship. We offer a variety of products catering to both residential and commercial clientele. </p>
 							<p>Whether you’re looking for backyard recreation, or a competition style trainer, we have the products to accommodate your every need. Since 1978 we have been producing products that exceed the competition. </p>
 							<p>Allow Best American the opportunity to provide you with the service you deserve and the products that will surpass your expectations. We are the industry leaders in both commercial and residential trampoline applications. </p>

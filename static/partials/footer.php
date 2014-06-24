@@ -13,7 +13,7 @@
         </div>
         <aside class="widget-footer">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <p>Best American Trampolines is led by a team of dedicated experts with in-depth knowledge of the national marketplace. </p>
                     <ul class="social">
                         <li><a href=""><span class="fa fa-facebook"></span></a></li>
@@ -22,7 +22,7 @@
                         <li><a href=""><span class="fa fa-pinterest"></span></a></li>
                     </ul>    
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="row">
                         <div class="col-xs-6">
                         <div class="widget-contact">
@@ -65,24 +65,29 @@
 <script src="scripts/libs/waypoints.min.js"></script>
 <script src="scripts/libs/jquery.counterup.min.js"></script>
 <script src="scripts/libs/jquery.elevatezoom.js"></script>
+<script src="scripts/libs/scrollReveal.js"></script>
 <script src="scripts/plugins.js"></script>
 <script src="scripts/main.js"></script>
-    <script type="text/javascript">
-        (function($){
-            $(function(){
+<script type="text/javascript">
+    (function($){
+        $(function(){
 
-                $('.slider-testi .owl-item > div').each(function(){
-                    var index = $(this).closest('.owl-item').index();
-                    var img = $(this).data('avatar');
-                    var name = $(this).data('name');
-                    var pos = $(this).data('position');
+            $('.slider-testi .owl-item > div').each(function(){
+                var index = $(this).closest('.owl-item').index();
+                var img = $(this).data('avatar');
+                var name = $(this).data('name');
+                var pos = $(this).data('position');
 
-                    $('.owl-page:eq('+index+') > span').html('<div class="avatar-details"><div class="col-md-5"><img src="'+img+'" class="img-circle img-grayscale"></div><div class="col-md-7"><div class="avatar-profile row"><p>'+name+'</p><p><span>'+pos+'</span></p></div></div>');
+                $('.owl-page:eq('+index+') > span').html('<div class="avatar-details"><div class="col-md-5"><img src="'+img+'" class="img-circle img-grayscale"></div><div class="col-md-7"><div class="avatar-profile row"><p>'+name+'</p><p><span>'+pos+'</span></p></div></div>');
 
-                });
             });
-        })(jQuery);
-    </script>
+        });
+    })(jQuery);
+</script>
+
+<script>
+   window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
