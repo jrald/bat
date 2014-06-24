@@ -48,21 +48,50 @@ get_header(); ?>
 								<div class="section section-l3">
 									<div class="prod-feat">
 										<div class="row">	
-											<?php query_posts('post_type=trampoline&post_status=publish&orderby=date&order=desc'); 
-											if ( have_posts() ):
-												while ( have_posts() ): the_post();
+											<?php
+											//for a given post type, return all
+											$post_type = 'trampoline';
+											$tax = 'trampoline_cat';
+											$tax_terms = get_terms($tax);
+											if ($tax_terms) {
+												foreach ($tax_terms  as $tax_term) {
 
-													$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+													if($tax_term->slug == 'sales'){ //slug name
+													    $args=array(
+													      'post_type' => $post_type,
+													      "$tax" => $tax_term->slug,
+													      'post_status' => 'publish',
+													      'posts_per_page' => -1,
+													      'caller_get_posts'=> 1
+													    );
 
-												<div class="col-sm-12">
-													<div class="prod-img"><img src="<?php echo $image[0]; ?>">	</div>
-													<h4><?php the_title(); ?></h4>
-													<p><?php echo content(NO, 100, NO); ?></p>
-												</div>
-											<?php 
-												endwhile;
-												wp_reset_query();
-											endif;
+													    $my_query = null;
+													    $my_query = new WP_Query($args);
+													    if( $my_query->have_posts() ) {
+													    //  echo 'List of '.$post_type . ' where the taxonomy '. $tax . '  is '. $tax_term->name;
+													      while ($my_query->have_posts()) : $my_query->the_post(); 
+
+													      ?>
+
+															<div class="col-sm-12">
+																<div class="prod-img"><?php if ( has_post_thumbnail() ) {the_post_thumbnail();}  ?></div>
+																<h4><?php the_title(); ?></h4>
+																<p><?php the_content(); ?></p>
+															</div>
+
+														<?php
+														endwhile;
+														wp_reset_query();
+													    } 
+
+													    else {
+															// If no content, include the "No posts found" template.
+															get_template_part( 'content', 'none' );
+
+													    }
+												  	}
+												}
+											}
 											?>
 										</div>
 									</div>

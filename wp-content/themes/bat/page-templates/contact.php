@@ -89,7 +89,7 @@ get_header(); ?>
 	<div class="section section-l5">
 		<div class="container">
 			<div class="row">
-				<div class="address-bubble" style="background: url('<?php if ( has_post_thumbnail() ) {the_post_thumbnail();}  ?>');">
+				<div class="address-bubble" style="background: url("<?php if ( has_post_thumbnail() ) {the_post_thumbnail();}?>");">
 					<?php
 					  $street =  of_get_option('street_address', 'no entry'); 
 					  str_replace(' ', '', $street);

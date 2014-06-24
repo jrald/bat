@@ -112,6 +112,17 @@ function optionsframework_options() {
 		'id' => 'logo_uploader',
 		'type' => 'upload');
 
+	$options[] = array(
+		'name' => __('Header', 'options_framework_theme'),
+		'type' => 'heading');
+
+	$options[] = array(
+		'name' => __('Address', 'options_framework_theme'),
+		'desc' => __('Enter the location you want to put in the header section', 'options_framework_theme'),
+		'id' => 'header_address',
+		'std' => '',
+		'type' => 'text');
+
 	/*$options[] = array(
 		'name' => __('Years of experience', 'options_framework_theme'),
 		'desc' => __('', 'options_framework_theme'),

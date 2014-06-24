@@ -12,12 +12,14 @@ get_header(); ?>
 			<?php
 			//for a given post type, return all
 			$post_type = 'trampoline';
+			$counter = 1;
+			$class = 'well-fieldgrass';
 			$tax = 'trampoline_cat';
 			$tax_terms = get_terms($tax);
 			if ($tax_terms) {
 				foreach ($tax_terms  as $tax_term) {
 
-					if($tax_term->slug == 'trampoline-page'){ //slug name
+					if($tax_term->slug == 'sales'){ //slug name
 					    $args=array(
 					      'post_type' => $post_type,
 					      "$tax" => $tax_term->slug,
@@ -30,10 +32,19 @@ get_header(); ?>
 					    $my_query = new WP_Query($args);
 					    if( $my_query->have_posts() ) {
 					    //  echo 'List of '.$post_type . ' where the taxonomy '. $tax . '  is '. $tax_term->name;
-					      while ($my_query->have_posts()) : $my_query->the_post(); ?>
+					      while ($my_query->have_posts()) : $my_query->the_post(); 
+
+					      if($counter==2){
+					      	$class = "well-grass";
+					      }
+					      else if($counter==3){
+					      	$class = "well-wood";
+					      }
+
+					      ?>
 					        
 							<div class="post post-lg">
-								<div class="well well-pretty well-fieldgrass">
+								<div class="well well-pretty <?php echo $class; ?>">
 								<span class="light-f"></span>
 								<span class="light-b"></span>
 									<div class="container">
@@ -75,6 +86,7 @@ get_header(); ?>
 							</div>
 						
 						<?php
+						$counter++;
 						endwhile;
 						wp_reset_query();
 					    } 

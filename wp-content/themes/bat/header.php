@@ -52,9 +52,25 @@
                   <li><a href="#">Shipping Policy</a></li>
                 </ul>
                 <ul class="nav navbar-nav contact pull-left">
-                    <li><span>Dallas, Texas</span></li>
-                    <li><a href="tel:866-690-3272">866-690-3272</a></li>
-                    <li><a href="tel:972-475-0092">972-475-0092</a></li>
+
+                    <?php
+                    $local_df =  of_get_option('local_dfw', 'no entry'); 
+                    str_replace(' ', '', $local_df);
+                    $toll_fr =  of_get_option('toll_free', 'no entry'); 
+                    str_replace(' ', '', $toll_fr);
+                    $head_state =  of_get_option('header_address', 'no entry'); 
+                    str_replace(' ', '', $head_state);
+                    ?>
+
+                    <?php if($head_state!=""){?>
+                    <li><span><?php echo $head_state; ?></span></li>
+                    <?php } ?>
+                    <?php if($toll_fr!=""){?>
+                    <li><a href="tel:<?php echo $toll_fr; ?>"><?php echo $toll_fr; ?></a></li>
+                    <?php } ?>
+                    <?php if($local_df!=""){?>
+                    <li><a href="tel:<?php echo $local_df; ?>"><?php echo $local_df; ?></a></li>
+                    <?php } ?>
                 </ul>
             </div>
             <nav class="navbar navbar-default navbar-right" role="navigation">
