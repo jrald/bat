@@ -62,4 +62,4 @@
 
  </header>
 
- <div class="body-wrapper">
+ <div class="body-wrapper cbp-so-scroller" id="cbp-so-scroller">

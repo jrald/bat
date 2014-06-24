@@ -5,20 +5,7 @@ var util = {
         },
         smoothScroll: function () {
 
-            $(function() {
-			  $('a[href*=#]:not([href=#])').click(function() {
-			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			      var target = $(this.hash);
-			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			      if (target.length) {
-			        $('html,body').animate({
-			          scrollTop: target.offset().top
-			        }, 1000);
-			        return false;
-			      }
-			    }
-			  });
-			});
+
 
 
         },
@@ -29,6 +16,7 @@ var util = {
         this.Carousel();
         this.statCount();
         this.zoomer();
+        this.Tabbed();
       },
       Custom: function() {
 
@@ -57,8 +45,34 @@ var util = {
 			    }   
 		    }
 
+		    
+
 		   		
 		});
+
+		var counter = 1;
+		
+		function listResize() {
+
+			$('.list-bordered-lg').each(function() {
+				
+				var max_li = 0;
+
+   				$(this).children('li').each(function() {
+
+   					var li_hght = $(this).outerHeight();
+   					if(li_hght>=max_li){
+
+   						max_li = li_hght;
+   						console.log(max_li + "<--max" + counter);
+   					}
+   				});
+   				$(this).children('li').css('height',max_li);
+   			});
+
+		}
+
+		listResize();	
 
 		$('.navbar-toggle').click( function() {
 			var menu_target = $(this).data('target');
@@ -139,6 +153,27 @@ var util = {
                 time: 1000
             });
 
+	    },
+	    Tabbed: function() {
+
+     		$('.tabbed').find('.nav-tabs li').first().addClass('active');
+     		$('.tabbed').find('.tab-content .tab-desc').addClass('hideleft make_transist');
+     		$('.tabbed').find('.tab-content .tab-desc').first().addClass('showleft');
+     		$('.tabbed').find('.tab-content .tab-desc').first().removeClass('hideleft');
+
+     		$('.tabbed').find('.nav-tabs li a').click(function() {
+     			var tab_target = $(this).attr('href');
+     			$('.tabbed').find('.nav-tabs li').removeClass('active');
+     			$(this).parent('li').addClass('active');
+
+     			$('.tabbed').find('.tab-content .tab-desc').removeClass('showleft');
+     			$('.tabbed').find('.tab-content .tab-desc').addClass('hideleft');     			
+
+     			$(tab_target).addClass('showleft');
+
+     		return false;
+
+			});
 	    },
 	    zoomer: function() {
 

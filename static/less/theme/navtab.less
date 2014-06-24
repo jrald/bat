@@ -1,5 +1,13 @@
  .tabbed{
 
+ 	.tab-pane{
+ 		overflow: hidden;
+ 		
+ 		.col-sm-5{
+ 			min-height: 485px;
+ 		}	
+ 	}
+	
 }
 .tab-map{
 	.clearfix;
@@ -18,8 +26,22 @@
 		img{
 			max-width: 100%;
 		}
-		.map-desc{
+		.tab-desc{
+			position: absolute;
 			padding: 60px 0;
+		}
+		ul.tick{
+			margin-top: 20px;
+			li{
+				background-position: 0 9px; 
+				margin-bottom: 5px;
+				font-size: 18px;
+
+				a{
+					font-size: 18px;
+					color: #fff;
+				}
+			}
 		}
 	}
 }
